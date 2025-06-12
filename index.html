@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+   
+</head>
+<body>
+    <h1>Lista de Compras</h1>
+
+    <div>
+        <img width="100px" src="https://static.vecteezy.com/system/resources/previews/019/906/512/original/pencil-graphic-clipart-design-free-png.png">
+    <form>
+        <label for="compra">Adicionar item:</label>
+        <br>
+        <input type="text" id="compra" name="compra">
+        <button type="button" onclick="AdicionarCompra()">Adicionar</button>
+    </form>
+
+    <ul id="lista-de-compras"></ul>
+
+    <script>
+        function AdicionarCompra() {let campoCompra = document.getElementById("compra");
+            let listaDeCompras = document.getElementById("lista-de-compras");
+            let novaCompra = document.createElement("li");
+            novaCompra.textContent = campoCompra.value;
+            listaDeCompras.appendChild(novaCompra);
+            campoCompra.value = "";}
+    </script>
+    </div>
+    <style>
+        body{background-color: rgb(59, 17, 174);}
+        h1{text-align: center; color: rgb(0, 0, 128); font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 70px;}
+        div{width: 300px; margin: 0 auto; }
+        
+    </style>
+</body>
+</html>
